@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="familytree.js"></script>
+  <style>
+    #tree {
+      width: 100%;
+      height: 600px;
+      border: 1px solid black;
+    } 
+  </style>
+</head>
+<body>
+  <div id="tree"></div> 
+  <script>
+     let family = new FamilyTree("#tree", {
+        // options
+        subtreeSeparation: 50,
+         nodeBinding: {
+            field_0: "name",
+            img_0: "img" 
+        },
+        nodes: [
+              {id : 1 ,pids : [2], name: "Paila Apparao" , gender : "male" , img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 2,pids : [1] ,name: "Paila Yerrayamma" , gender : "female" , img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 3 , pids : [5],fid : 1 , mid : 2 , name: "Paila Suresh", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 4 , pids : [6],fid : 1 , mid : 2 , name: "Kundrapu Parvathi", gender : "female",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 5 , pids : [3], name: "Paila Satya", gender : "female",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 6 , pids : [4], name: "Kundrapu Demudu", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 7 ,fid : 3 , mid : 5 , name: "Paila Sagar", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 8 ,fid : 3 , mid : 5 , name: "Paila Dhanush", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 9 ,fid : 6 , mid : 4 , name: "Kundrapu Pavan Kumar", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"},
+              {id : 10 ,fid : 6 , mid : 4 , name: "Kundrapu Hema Charan Teja", gender : "male",img : "https://www.w3schools.com/howto/img_avatar.png"} 
+             ]
+     });
+</script>
+  
+</body>
+</html>
